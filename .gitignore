@@ -1,0 +1,9 @@
+runs/
+*.pt
+*.log
+__pycache__/
+*.pyc
+.env
+data/images/
+data/labels/
+eval_results.json

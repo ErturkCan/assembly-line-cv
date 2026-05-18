@@ -1,0 +1,15 @@
+# Dataset config for YOLOv8 training
+# Uses NEU Surface Defect Dataset structure
+# Download: http://faculty.neu.edu.cn/yunhyan/NEU_surface_defect_database.html
+
+path: ./data
+train: images/train
+val: images/val
+test: images/test
+
+nc: 4  # number of classes
+names:
+  0: scratch
+  1: dent
+  2: paint_bubble
+  3: contamination
