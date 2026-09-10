@@ -20,8 +20,9 @@ def train(data_yaml, model_name, epochs, img_size, batch_size, output_dir):
     )
 
     print(f"\nTraining complete.")
-    print(f"Best weights saved to: {Path(output_dir) / 'defect_detector' / 'weights' / 'best.pt'}")
-    print(f"mAP@0.5: {results.results_dict.get('metrics/mAP50(B)', 'N/A'):.4f}")
+    print(f"Best weights saved to: {model.trainer.best}")
+    score = results.results_dict.get('metrics/mAP50(B)')
+    print(f"mAP@0.5: {score:.4f}" if score is not None else 'mAP@0.5: unavailable')
 
 
 if __name__ == "__main__":

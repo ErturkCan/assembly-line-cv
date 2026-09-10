@@ -1,6 +1,6 @@
 # Dataset config for YOLOv8 training
-# Uses NEU Surface Defect Dataset structure
-# Download: http://faculty.neu.edu.cn/yunhyan/NEU_surface_defect_database.html
+# Custom example classes. Set path to your absolute dataset root.
+# Images and YOLO labels must use the same class mapping below.
 
 path: ./data
 train: images/train
