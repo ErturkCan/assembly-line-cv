@@ -27,6 +27,20 @@ Training may download the base YOLO weights. Those base weights alone do not det
 
 ## Code
 
+### Public sample
+
+<img src="demo/coco-sample.jpg" width="260" alt="Actual pretrained YOLOv8n output on the Ultralytics bus sample" />
+
+This is an inference and annotation example using **pretrained YOLOv8n COCO weights** and the [public Ultralytics bus sample](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/assets/bus.jpg). It exercises the same `draw_detections` helper as video inference. It does **not** use defect weights, company footage or a production test set.
+
+```bash
+python demo.py --model yolov8n.pt
+```
+
+The command may download the pretrained weights. Output and actual detection records go to `demo/coco-sample.jpg` and `demo/result.json`. Custom defects still require a labelled dataset and trained checkpoint.
+
+### Files
+
 - `train.py`: fine-tuning and validation through Ultralytics.
 - `evaluate.py`: mAP, precision and recall, saved to `eval_results.json`.
 - `detect.py`: video/webcam input, annotations, optional MP4 output and an FPS counter. Press `q` to stop the preview; use `--no-display` without a desktop.
